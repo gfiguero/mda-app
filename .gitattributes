@@ -1,0 +1,10 @@
+*.html.erb linguist-language=Ruby
+*.rb linguist-language=Ruby
+*.rake linguist-language=Ruby
+*.gemspec linguist-language=Ruby
+Gemfile linguist-language=Ruby
+Gemfile.lock linguist-language=Ruby
+Rakefile linguist-language=Ruby
+config.ru linguist-language=Ruby
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
