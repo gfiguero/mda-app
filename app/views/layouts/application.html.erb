@@ -20,9 +20,40 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="container-fluid min-vh-100 d-flex flex-column">
+    <div class="row flex-grow-1">
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-secondary" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"><span class="fs-4">MDA</span></a>
+      </div>
+      <div class="col">
+        <header class="row d-flex flex-column">
+          <nav class="navbar navbar-expand-lg bg-body-secondary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+            </div>
+          </nav>
+        </header>
+        <div class="row">
+          <div class="col">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
+      <%#= render "layouts/navigation" %>
+      <%#= render "layouts/flash_messages" %>
+      <%#= yield :sidebar %>
+      <%#= yield :header %>
+      <%#= yield :content %>
+      <%#= yield %>
+      <%#= yield :footer %>
+      <%#= render "layouts/footer" %>
+      <%#= render "layouts/debug" %>
+      <%#= render "layouts/turbo_frames" %>
+      <%#= render "layouts/turbo_stream" %>
 </html>
