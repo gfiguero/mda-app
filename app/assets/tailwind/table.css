@@ -1,0 +1,51 @@
+/*
+   Notice: this style contains all the rules for tables
+*/
+
+.table {
+    @apply w-full border text-sm text-left text-gray-500;
+}
+
+.table-index{
+    @apply table table-auto;
+}
+
+.table-container {
+    @apply my-2;
+    @apply relative shadow overflow-x-auto rounded-lg;
+}
+
+.table-paginator {
+    @apply my-2 py-2;
+    @apply overflow-x-auto;
+}
+
+.table-header {
+    @apply text-gray-700 bg-gray-200;
+}
+
+.table-row {
+    @apply bg-white hover:bg-gray-50 border-b;
+}
+
+.table-cell {
+    @apply px-6 py-2;
+    @apply whitespace-nowrap;
+    @apply font-medium text-gray-900;
+}
+
+.table-actions {
+    @apply table-cell;
+    @apply flex gap-1;
+    @apply px-1 py-1;
+}
+
+.table-attribute {
+    @apply table-cell;
+    @apply font-bold;
+}
+
+.table-attribute-actions {
+    @apply table-attribute;
+    @apply px-1 py-2 w-52;
+}

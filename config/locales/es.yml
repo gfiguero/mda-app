@@ -1,0 +1,18 @@
+es:
+  employees:
+    properties:
+      title: 'Empleados'
+    actions:
+      new: 'Nuevo Empleado'
+      search: 'Buscar'
+      filter: 'Filtrar'
+  activerecord:
+    attributes:
+      employee:
+        id: 'ID'
+        first_name: 'Nombres'
+        last_name: 'Apellidos'
+        identification_number: 'RUT'
+        identification_code: 'Dígito verificador'
+        identification_type: 'Tipo de identificador'
+        email_address: 'Dirección de correo electrónico'

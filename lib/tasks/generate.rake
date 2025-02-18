@@ -5,7 +5,8 @@ namespace :mda do
   task generate: :environment do
     puts 'Starting mda:generate task...'
 
-    scaffolds = %w[InspectionScaffold InsuranceCompanyScaffold MedicalLicenseScaffold AgentScaffold EmployeeScaffold EmploymentConditionScaffold HealthAuditScaffold]
+    #    scaffolds = %w[InspectionScaffold InsuranceCompanyScaffold MedicalLicenseScaffold AgentScaffold EmployeeScaffold EmploymentConditionScaffold HealthAuditScaffold]
+    scaffolds = %w[EmployeeScaffold]
 
     scaffolds.each do |scaffold|
       puts "Generating #{scaffold}..."

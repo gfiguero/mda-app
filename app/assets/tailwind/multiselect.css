@@ -1,0 +1,126 @@
+.multiselect__container {
+  @apply block border shadow rounded-md outline-none mt-2 px-2 py-1 w-full;
+}
+
+.multiselect__container:focus-within {
+}
+
+.multiselect__container--disabled {
+  @apply cursor-not-allowed bg-gray-200;
+}
+
+.multiselect__container:hover {
+}
+
+.multiselect__no-result {
+  @apply text-gray-600 text-sm p-3;
+}
+
+.multiselect__addable-button {
+  @apply cursor-pointer text-gray-600 p-2;
+}
+
+.multiselect__addable-button:hover {
+  @apply text-blue-400;
+}
+
+.multiselect__hidden {
+  @apply hidden;
+}
+
+.multiselect__preview {
+  @apply flex flex-wrap text-sm gap-x-2;
+}
+
+.multiselect__pill {
+  @apply flex justify-start rounded-md border bg-gray-50 pl-2 my-1;
+}
+
+.multiselect__pill-delete {
+  @apply flex rounded-md p-1 m-1;
+}
+
+.multiselect__pill-delete:hover {
+  @apply bg-red-200;
+}
+
+.multiselect__pill:hover svg{
+  @apply fill-red-600;
+}
+
+.multiselect__pill-text {
+  @apply text-ellipsis overflow-hidden py-1;
+}
+
+.multiselect__input-container {
+  @apply flex my-1;
+}
+
+.multiselect__focused {
+  @apply bg-white;
+}
+
+.multiselect__placeholder {
+  @apply text-gray-600 italic pl-1;
+}
+
+.multiselect__addable {
+  @apply text-center text-gray-400;
+}
+
+.multiselect__addable:hover {
+  @apply text-gray-600;
+}
+
+.multiselect__search {
+  @apply block shadow rounded-md border border-gray-200 text-gray-900 text-sm outline-none px-3 py-2 w-full;
+}
+
+.multiselect__search:disabled {
+  @apply bg-white cursor-not-allowed;
+}
+
+.multiselect__search::placeholder {
+  @apply text-gray-400 opacity-100 italic;
+}
+
+.multiselect__list {
+  @apply text-sm text-gray-700 list-none overflow-y-auto max-h-96 p-0 m-0;
+}
+
+.multiselect__list li {
+  @apply block items-center;
+}
+
+
+.multiselect__list li:first {
+  @apply border-t-0;
+}
+
+.multiselect__list li:hover {
+  @apply bg-blue-100;
+}
+
+.multiselect__list li label {
+  @apply flex cursor-pointer items-center p-2;
+}
+
+.multiselect__list li:first-child {
+  @apply rounded-t-md;
+}
+
+.multiselect__list li:last-child {
+  @apply rounded-b-md;
+}
+
+.multiselect__list li input {
+  @apply mr-3;
+}
+
+.multiselect__dropdown {
+  @apply absolute hidden shadow bg-white rounded-md border border-gray-200 outline-none z-50 mt-2 w-full;
+}
+
+.multiselect__dropdown--open {
+  @apply block;
+}

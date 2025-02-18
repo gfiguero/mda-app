@@ -1,0 +1,19 @@
+<div class="button-container">
+
+  <% if %w[index].include? action_name %>
+    <%= button_tag text_icon(I18n.t('employees.actions.search'), 'search'), name: 'search', type: 'button', class: "btn btn-primary", data: { 'drawer-target': "drawer-search", 'drawer-show': "drawer-search", 'aria-controls': "drawer-search" } %>
+  <% end %>
+
+  <% unless %w[index].include? action_name %>
+    <%= link_to icon_text(I18n.t('employees.actions.index')), employees_path, class: "btn btn-primary" %>
+  <% end %>
+
+  <% unless %w[new create edit update].include? action_name %>
+    <%= link_to text_icon(I18n.t('employees.actions.new'), 'plus'), new_employee_path, class: "btn btn-primary" %>
+  <% end %>
+
+  <% unless %w[new create edit update index].include? action_name %>
+    <%= link_to icon_text(I18n.t('employees.actions.edit')), edit_employee_path(@employee), class: "btn btn-primary" %>
+  <% end %>
+
+</div>

@@ -4,8 +4,8 @@ class EmployeeScaffold
   BASE_COMMAND_GENERATE = 'rails g scaffold'
   BASE_COMMAND_DESTROY = 'rails d scaffold'
   CLASS_NAME = 'Employee'
-  #COMMAND_OPTIONS = '--skip-migration --force'
-  COMMAND_OPTIONS = ''
+  COMMAND_OPTIONS = '--skip-migration --force'
+  #COMMAND_OPTIONS = ''
 
   FIELDS = [
     'first_name:string',
@@ -13,7 +13,7 @@ class EmployeeScaffold
     'identification_number:string',
     'identification_code:string',
     'identification_type:string',
-    'email:string',
+    'email_address:string',
   #'users:references',
   #'profiles:references',
   ].freeze

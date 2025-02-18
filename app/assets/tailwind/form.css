@@ -1,0 +1,53 @@
+/*
+   Notice: this style contains all the rules for forms
+*/
+
+.form-container {
+    @apply contents;
+}
+
+.form-field {
+    @apply my-5;
+}
+
+.form-label {
+    @apply font-bold;
+}
+
+.form-control {
+    @apply block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full;
+}
+
+.form-control-invalid {
+    @apply border-red-600;
+}
+
+.form-control-message {
+    @apply text-red-600;
+}
+
+.form-checkbox-container {
+    @apply flex items-center;
+}
+
+.form-checkbox-control {
+    @apply text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2;
+    @apply w-4 h-4;
+}
+
+.form-checkbox-label {
+    @apply form-label;
+    @apply ms-2;
+}
+
+.form-button {
+    @apply my-8;
+}
+
+.form-actions {
+    @apply inline;
+}
+
+.form-submit {
+    @apply button-show;
+}

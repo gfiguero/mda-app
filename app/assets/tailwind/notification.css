@@ -1,0 +1,87 @@
+/*
+   Notice: this style contains all the rules for notification
+*/
+.notification-wrapper {
+    @apply relative;
+}
+
+.notification-container {
+    @apply absolute top-5 right-10;
+}
+
+.notification {
+    @apply flex items-center gap-3;
+    @apply rounded-lg shadow max-w-fit;
+    @apply text-gray-500 bg-white;
+    @apply p-5 my-4;
+}
+
+.notification-icon {
+    @apply flex shrink-0 justify-center items-center;
+    @apply rounded-md;
+    @apply w-8 h-8;
+}
+
+.notification-message {
+    @apply text-sm font-normal;
+    @apply flex items-center;
+    @apply w-80;
+}
+
+.notification-close {
+    @apply ml-auto rounded-lg focus:ring-2;
+    @apply bg-white text-gray-400 hover:bg-gray-100 hover:text-gray-600;
+    @apply w-8 h-8;
+    @apply flex shrink-0 items-center justify-center;
+}
+
+.notification-notice {
+    @apply bg-blue-200;
+}
+
+.notification-notice .notification-icon{
+    @apply text-blue-500 bg-blue-50;
+}
+
+.notification-alert {
+    @apply bg-yellow-100;
+}
+.notification-alert .notification-icon{
+    @apply text-yellow-500 bg-yellow-50;
+}
+
+.notification-error {
+    @apply bg-red-200;
+}
+.notification-error  .notification-icon{
+    @apply text-red-400 bg-red-50;
+}
+
+.notification-success {
+    @apply bg-green-200;
+}
+.notification-success .notification-icon {
+    @apply text-green-500 bg-green-100;
+}
+
+.notification-created {
+    @apply bg-blue-200;
+}
+.notification-created .notification-icon {
+    @apply text-blue-500 bg-blue-100;
+}
+
+.notification-updated {
+    @apply bg-yellow-100;
+}
+.notification-updated .notification-icon{
+    @apply text-yellow-500 bg-yellow-50;
+}
+
+.notification-deleted {
+    @apply bg-red-200;
+}
+.notification-deleted  .notification-icon{
+    @apply text-red-400 bg-red-50;
+}
+

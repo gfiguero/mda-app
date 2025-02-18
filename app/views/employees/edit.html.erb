@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="container-title">
+    <h1 class="title-text"><%= I18n.t 'employees.properties.title' %></h1>
+    <h3 class="subtitle-text"><%= I18n.t 'employees.actions.edit', id: @employee.id %></h3>
+  </div>
+
+  <%= render "buttons" %>
+
+  <%= render "form", employee: @employee %>
+
+</div>

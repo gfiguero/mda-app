@@ -1,0 +1,15 @@
+.container-fluid {
+    @apply px-5 bg-white antialiased w-full;
+}
+
+.container-title {
+    @apply py-2 flex justify-between items-center;
+}
+
+.title-text {
+    @apply font-bold text-4xl;
+}
+
+.subtitle-text {
+    @apply font-bold text-xl;
+}
