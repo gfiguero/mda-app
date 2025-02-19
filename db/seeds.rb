@@ -11,20 +11,20 @@
 # frozen_string_literal: true
 
 # https://marvelcinematicuniverse.fandom.com/wiki/Stark_Industries
-platform_admin = User.create(first_name: "Platform", last_name: "Admin", email_address: "admin@mdagestion.cl", password: "12345678", platform_admin: true)
+platform_admin = User.create(first_name: "Platform", last_name: "Admin", email: "admin@mdagestion.cl", password: "12345678", platform_admin: true)
 
 # The marvel users:
-iron_man = User.create(first_name: "Tony", last_name: "Stark", email_address: "ironman@marvel.com", password: "12345678")
-captain_america = User.create(first_name: "Steve", last_name: "Rogers", email_address: "cap@marvel.com", password: "12345678")
-black_widow = User.create(first_name: "Natasha", last_name: "Romanoff", email_address: "blackwidow@marvel.com", password: "12345678")
-thor = User.create(first_name: "Thor", last_name: "Odinson", email_address: "thor@marvel.com", password: "12345678")
-hulk = User.create(first_name: "Bruce", last_name: "Banner", email_address: "hulk@marvel.com", password: "12345678")
-black_panther = User.create(first_name: "T'Challa", last_name: "Black Panther", email_address: "blackpanther@marvel.com", password: "12345678")
-spider_man = User.create(first_name: "Peter", last_name: "Parker", email_address: "spiderman@marvel.com", password: "12345678")
-dr_strange = User.create(first_name: "Stephen", last_name: "Strange", email_address: "drstrange@marvel.com", password: "12345678")
-nick_fury = User.create(first_name: "Nick", last_name: "Fury", email_address: "nickfury@marvel.com", password: "12345678")
-professor_x = User.create(first_name: "Charles", last_name: "Xavier", email_address: "professorx@marvel.com", password: "12345678")
-fantastic_four = User.create(first_name: "Reed", last_name: "Richards", email_address: "reedrichards@marvel.com", password: "12345678")
+iron_man = User.create(first_name: "Tony", last_name: "Stark", email: "ironman@marvel.com", password: "12345678")
+captain_america = User.create(first_name: "Steve", last_name: "Rogers", email: "cap@marvel.com", password: "12345678")
+black_widow = User.create(first_name: "Natasha", last_name: "Romanoff", email: "blackwidow@marvel.com", password: "12345678")
+thor = User.create(first_name: "Thor", last_name: "Odinson", email: "thor@marvel.com", password: "12345678")
+hulk = User.create(first_name: "Bruce", last_name: "Banner", email: "hulk@marvel.com", password: "12345678")
+black_panther = User.create(first_name: "T'Challa", last_name: "Black Panther", email: "blackpanther@marvel.com", password: "12345678")
+spider_man = User.create(first_name: "Peter", last_name: "Parker", email: "spiderman@marvel.com", password: "12345678")
+dr_strange = User.create(first_name: "Stephen", last_name: "Strange", email: "drstrange@marvel.com", password: "12345678")
+nick_fury = User.create(first_name: "Nick", last_name: "Fury", email: "nickfury@marvel.com", password: "12345678")
+professor_x = User.create(first_name: "Charles", last_name: "Xavier", email: "professorx@marvel.com", password: "12345678")
+fantastic_four = User.create(first_name: "Reed", last_name: "Richards", email: "reedrichards@marvel.com", password: "12345678")
 
 
 total_employees = 3000

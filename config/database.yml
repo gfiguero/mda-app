@@ -11,7 +11,13 @@ default: &default
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  adapter: postgis
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  database: mda_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
