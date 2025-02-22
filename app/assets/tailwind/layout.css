@@ -1,15 +1,30 @@
-.container-fluid {
-    @apply px-5 bg-white antialiased w-full;
-}
+@layer components {
+    .navbar-container {
+        @apply w-full h-16;
+        @apply fixed top-0;
+    }
+    .sidebar-container {
+        @apply w-96 h-dvh;
+        @apply fixed top-16 left-0;
+        @apply bg-gray-600;
+    }
+    .main-container {
+        @apply ml-96 mt-16;
+    }
 
-.container-title {
-    @apply py-2 flex justify-between items-center;
-}
+    .container-fluid {
+        @apply px-4 antialiased;
+    }
 
-.title-text {
-    @apply font-bold text-4xl;
-}
+    .container-title {
+        @apply py-2 flex justify-between items-center;
+    }
 
-.subtitle-text {
-    @apply font-bold text-xl;
+    .title-text {
+        @apply font-bold text-4xl;
+    }
+
+    .subtitle-text {
+        @apply font-bold text-xl;
+    }
 }

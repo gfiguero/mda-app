@@ -16,3 +16,5 @@ es:
         identification_code: 'Dígito verificador'
         identification_type: 'Tipo de identificador'
         email_address: 'Dirección de correo electrónico'
+  operator:
+    actions: 'Acciones'

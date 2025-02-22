@@ -1,19 +1,19 @@
 <div class="button-container">
 
   <% if %w[index].include? action_name %>
-    <%= button_tag text_icon(I18n.t('employees.actions.search'), 'search'), name: 'search', type: 'button', class: "btn btn-primary", data: { 'drawer-target': "drawer-search", 'drawer-show': "drawer-search", 'aria-controls': "drawer-search" } %>
+    <%= button_tag raw(icon('filter') + icon_text(I18n.t('employees.actions.filter'))), name: 'filter', type: 'button', class: "button-filter", data: { 'drawer-target': "drawer-filter", 'drawer-show': "drawer-filter", 'aria-controls': "drawer-filter" } %>
   <% end %>
 
   <% unless %w[index].include? action_name %>
-    <%= link_to icon_text(I18n.t('employees.actions.index')), employees_path, class: "btn btn-primary" %>
+    <%= link_to raw(icon('back') + icon_text(I18n.t('employees.actions.index'))), employees_path, class: "button-general" %>
   <% end %>
 
   <% unless %w[new create edit update].include? action_name %>
-    <%= link_to text_icon(I18n.t('employees.actions.new'), 'plus'), new_employee_path, class: "btn btn-primary" %>
+    <%= link_to raw(icon('new') + icon_text(I18n.t('employees.actions.new'))), new_employee_path, class: "button-new" %>
   <% end %>
 
   <% unless %w[new create edit update index].include? action_name %>
-    <%= link_to icon_text(I18n.t('employees.actions.edit')), edit_employee_path(@employee), class: "btn btn-primary" %>
+    <%= link_to raw(icon('edit') + icon_text(I18n.t('employees.actions.edit'))), edit_employee_path(@employee), class: "button-edit" %>
   <% end %>
 
 </div>

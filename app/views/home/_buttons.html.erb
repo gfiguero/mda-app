@@ -1,0 +1,31 @@
+<div class="button-container">
+
+  <%= link_to 'Crear HTTP', home_create_path, class: 'button-new' %>
+  <%= link_to 'Crear TURBO', home_create_path, class: 'button-new', data: { turbo_stream: true } %>
+  <%= link_to 'Editar HTTP', home_update_path, class: 'button-edit' %>
+  <%= link_to 'Editar TURBO', home_update_path, class: 'button-edit', data: { turbo_stream: true } %>
+  <%= link_to 'Eliminar HTTP', home_destroy_path, class: 'button-delete' %>
+  <%= link_to 'Eliminar Turbo', home_destroy_path, class: 'button-delete', data: { turbo_stream: true } %>
+  <%= link_to 'Volver', root_path, class: 'button-general' %>
+
+</div>
+
+<div class="button-container">
+
+  <%= button_tag 'general', class: 'button-general' %>
+
+  <%= button_tag 'success', class: 'button-success' %>
+  <%= button_tag 'danger', class: 'button-danger' %>
+  <%= button_tag 'warning', class: 'button-warning' %>
+  <%= button_tag 'info', class: 'button-info' %>
+
+  <%= button_tag 'alert', class: 'button-alert' %>
+  <%= button_tag 'error', class: 'button-error' %>
+
+  <%= button_tag 'show', class: 'button-show' %>
+  <%= button_tag 'new', class: 'button-new' %>
+  <%= button_tag 'edit', class: 'button-edit' %>
+  <%= button_tag 'delete', class: 'button-delete' %>
+
+  <%= button_tag 'filter', class: 'button-filter' %>
+</div>
