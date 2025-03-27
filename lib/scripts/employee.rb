@@ -1,25 +1,25 @@
 # frozen_string_literal: true
 
 class EmployeeScaffold
-  BASE_COMMAND_GENERATE = 'rails g scaffold'
-  BASE_COMMAND_DESTROY = 'rails d scaffold'
-  CLASS_NAME = 'Employee'
-  COMMAND_OPTIONS = '--skip-migration --force'
-  #COMMAND_OPTIONS = ''
+  BASE_COMMAND_GENERATE = "rails g scaffold"
+  BASE_COMMAND_DESTROY = "rails d scaffold"
+  CLASS_NAME = "Employee"
+  COMMAND_OPTIONS = "--skip-migration --force"
+  # COMMAND_OPTIONS = ''
 
   FIELDS = [
-    'first_name:string',
-    'last_name:string',
-    'identification_number:string',
-    'identification_code:string',
-    'identification_type:string',
-    'email_address:string',
-  #'users:references',
-  #'profiles:references',
+    "first_name:string",
+    "last_name:string",
+    "identification_number:string",
+    "identification_code:string",
+    "identification_type:string",
+    "email_address:string"
+    # 'users:references',
+    # 'profiles:references',
   ].freeze
 
   def generate_command
-    @command = "#{BASE_COMMAND_GENERATE} #{CLASS_NAME} #{FIELDS.join(' ')} #{COMMAND_OPTIONS}"
+    @command = "#{BASE_COMMAND_GENERATE} #{CLASS_NAME} #{FIELDS.join(" ")} #{COMMAND_OPTIONS}"
   end
 
   def destroy_command
