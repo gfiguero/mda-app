@@ -45,7 +45,7 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
 
     if @employee.save
-      redirect_to @employee, created: I18n.t('employee.message.created')
+      redirect_to @employee, created: I18n.t("employee.message.created")
     else
       render :new, status: :unprocessable_entity
     end
@@ -54,7 +54,7 @@ class EmployeesController < ApplicationController
   # PATCH/PUT /employees/1
   def update
     if @employee.update(employee_params)
-      redirect_to @employee, updated: I18n.t('employee.message.updated'), status: :see_other
+      redirect_to @employee, updated: I18n.t("employee.message.updated"), status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -63,10 +63,11 @@ class EmployeesController < ApplicationController
   # DELETE /employees/1
   def destroy
     @employee.destroy!
-    redirect_to employees_path, deleted: I18n.t('employee.message.destroyed'), status: :see_other, format: :html
+    redirect_to employees_path, deleted: I18n.t("employee.message.destroyed"), status: :see_other, format: :html
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_employee
     @employee = Employee.find(params.expect(:id))
@@ -74,7 +75,7 @@ class EmployeesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def employee_params
-    params.expect(employee: [ :first_name, :last_name, :identification_number, :identification_code, :identification_type, :email_address ])
+    params.expect(employee: [:first_name, :last_name, :identification_number, :identification_code, :identification_type, :email_address])
   end
 
   def set_employees
@@ -88,10 +89,10 @@ class EmployeesController < ApplicationController
   end
 
   def filter_params
-    params.permit(:id, :first_name, :last_name, :identification_number, :identification_code, :identification_type, :email_address).reject{|key,value| value.blank? }
+    params.permit(:id, :first_name, :last_name, :identification_number, :identification_code, :identification_type, :email_address).reject { |key, value| value.blank? }
   end
 
   def disabled_pagination
-    render json: Employee.all if params[:items] == 'all'
+    render json: Employee.all if params[:items] == "all"
   end
 end

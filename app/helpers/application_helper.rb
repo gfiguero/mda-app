@@ -27,33 +27,33 @@ module ApplicationHelper
     sort_column = params[:sort_column]
     sort_direction = params[:sort_direction]
     text ||= path
-    return link_to raw(text + icon('chevron-up', 'w-5 h-2')), send(path, request.params.merge(sort_column: column, sort_direction: 'desc' )), { class: 'flex items-center'} if sort_column == column and sort_direction == 'asc'
-    return link_to raw(text + icon('chevron-down', 'w-5 h-2')), send(path, request.params.merge( sort_column: column, sort_direction: 'asc' )), { class: 'flex items-center'} if sort_column == column and sort_direction == 'desc'
-    link_to raw(text + icon('chevron-sort', 'w-5 h-3')), send(path, request.params.merge( sort_column: column, sort_direction: 'asc' )), { class: 'flex items-center'}
+    return link_to raw(text + icon("chevron-up", "w-5 h-2")), send(path, request.params.merge(sort_column: column, sort_direction: "desc")), {class: "flex items-center"} if sort_column == column && sort_direction == "asc"
+    return link_to raw(text + icon("chevron-down", "w-5 h-2")), send(path, request.params.merge(sort_column: column, sort_direction: "asc")), {class: "flex items-center"} if sort_column == column && sort_direction == "desc"
+    link_to raw(text + icon("chevron-sort", "w-5 h-3")), send(path, request.params.merge(sort_column: column, sort_direction: "asc")), {class: "flex items-center"}
   end
 
   def notification_icon(notification_key)
     case notification_key
-    when 'notice' then return icon('info-circle')
-    when 'alert' then return icon('exclamation-circle')
-    when 'error' then return icon('close-circle')
-    when 'success' then return icon('check-circle')
-    when 'created' then return icon('plus-circle')
-    when 'updated' then return icon('edit')
-    when 'deleted' then return icon('trash')
-    else return icon('info-circle')
+    when "notice" then icon("info-circle")
+    when "alert" then icon("exclamation-circle")
+    when "error" then icon("close-circle")
+    when "success" then icon("check-circle")
+    when "created" then icon("plus-circle")
+    when "updated" then icon("edit")
+    when "deleted" then icon("trash")
+    else icon("info-circle")
     end
   end
 
   def icon_text(text)
-    raw('<div class="ml-2">' + text + '</div>')
+    raw("<div class='ml-2''>" + text + "</div>")
   end
 
   def error_message(invalid, messages)
     if invalid
-      errors = ''
-      messages.each { |message| errors += '<div class="form-control-message">' + message + '</div>' }
-      return errors
+      errors = ""
+      messages.each { |message| errors += "<div class='form-control-message'>" + message + "</div>" }
+      errors
     end
   end
 
