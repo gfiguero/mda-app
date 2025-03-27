@@ -17,7 +17,7 @@
         @apply sm:translate-x-0;
         @apply h-dvh;
 
-        .list-wrapper {
+        .navigation-wrapper {
             @apply h-full;
             @apply px-3;
             @apply py-4;
@@ -25,51 +25,54 @@
             @apply bg-gray-50;
             @apply dark:bg-gray-800;
 
-            ul {
+            .navigation-list {
                 @apply space-y-2;
                 @apply font-medium;
 
-                li > a {
-                    @apply flex;
-                    @apply items-center;
-                    @apply p-2;
-                    @apply text-gray-900;
-                    @apply rounded-lg;
-                    @apply dark:text-white;
-                    @apply hover:bg-gray-100;
-                    @apply dark:hover:bg-gray-700;
+                .navigation-item {
 
-                    .link-icon {
-                        @apply shrink-0;
-                        @apply w-5;
-                        @apply h-5;
-                        @apply text-gray-500;
-                        @apply transition;
-                        @apply duration-75;
-                        @apply dark:text-gray-400;
-                        @apply group-hover:text-gray-900;
-                        @apply dark:group-hover:text-white;
-                    }
-
-                    .link-name {
-                        @apply flex-1;
-                        @apply ms-3;
-                        @apply whitespace-nowrap;
-                    }
-
-                    .link-badge {
-                        @apply inline-flex;
+                    .navigation-link {
+                        @apply flex;
                         @apply items-center;
-                        @apply justify-center;
-                        @apply px-2;
-                        @apply ms-3;
-                        @apply text-sm;
-                        @apply font-medium;
-                        @apply text-blue-800;
-                        @apply bg-blue-100;
-                        @apply rounded-full;
-                        @apply dark:bg-blue-900;
-                        @apply dark:text-blue-300;
+                        @apply p-2;
+                        @apply text-gray-900;
+                        @apply rounded-lg;
+                        @apply dark:text-white;
+                        @apply hover:bg-gray-100;
+                        @apply dark:hover:bg-gray-700;
+
+                        .link-icon {
+                            @apply shrink-0;
+                            @apply w-5;
+                            @apply h-5;
+                            @apply text-gray-500;
+                            @apply transition;
+                            @apply duration-75;
+                            @apply dark:text-gray-400;
+                            @apply group-hover:text-gray-900;
+                            @apply dark:group-hover:text-white;
+                        }
+
+                        .link-name {
+                            @apply flex-1;
+                            @apply ms-3;
+                            @apply whitespace-nowrap;
+                        }
+
+                        .link-badge {
+                            @apply inline-flex;
+                            @apply items-center;
+                            @apply justify-center;
+                            @apply px-2;
+                            @apply ms-3;
+                            @apply text-sm;
+                            @apply font-medium;
+                            @apply text-blue-800;
+                            @apply bg-blue-100;
+                            @apply rounded-full;
+                            @apply dark:bg-blue-900;
+                            @apply dark:text-blue-300;
+                        }
                     }
                 }
             }

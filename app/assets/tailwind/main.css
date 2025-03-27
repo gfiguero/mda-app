@@ -1,0 +1,14 @@
+/*
+   Notice: this style contains all the rules for main
+*/
+
+@layer components {
+    .main-wrapper {
+        @apply ml-96;
+        @apply mt-16;
+
+        .main-container {
+            @apply p-3;
+        }
+    }
+}

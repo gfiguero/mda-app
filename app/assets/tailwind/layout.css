@@ -1,11 +1,8 @@
 @import "./navbar.css";
 @import "./sidebar.css";
+@import "./main.css";
 
 @layer components {
-    .main-container {
-        @apply ml-96 mt-16;
-    }
-
     .container-fluid {
         @apply px-4 antialiased;
     }
