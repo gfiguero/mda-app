@@ -6,7 +6,6 @@
     .sidebar-container {
         @apply w-96 h-dvh;
         @apply fixed top-16 left-0;
-        @apply bg-gray-600;
     }
     .main-container {
         @apply ml-96 mt-16;

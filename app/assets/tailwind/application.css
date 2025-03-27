@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@plugin "@flowbite";
-
 @import "./layout.css";
 @import "./components.css";
 @import "./pagination.css";

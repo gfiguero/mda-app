@@ -3,48 +3,38 @@
 */
 
 @layer components {
-    .table-container {
-        @apply py-2;
-    }
-
     .table-wrapper {
-        @apply relative shadow overflow-x-auto rounded shadow;
+        @apply rounded overflow-x-auto shadow-md;
     }
 
     .table {
         @apply table-auto;
         @apply w-full;
         @apply text-sm text-left text-gray-500;
-    }
 
-    .table-header {
-        @apply font-bold text-gray-700 bg-gray-200;
-    }
+        .header {
+            @apply font-bold text-gray-700 bg-gray-200;
 
-    .table-attribute {
-        @apply px-4 py-2;
-        @apply whitespace-nowrap;
-    }
+            .cell {
+                @apply px-4 py-2;
+                @apply whitespace-nowrap;
+            }
+        }
 
-    .table-attribute-actions {
-        @apply px-4 py-2;
-        @apply whitespace-nowrap;
-    }
+        .row {
+            @apply border-b-gray-800;
+            @apply odd:bg-white even:bg-gray-50;
+            @apply hover:bg-gray-100;
 
-    .table-row {
-        @apply border-b-gray-800;
-        @apply odd:bg-white even:bg-gray-50;
-        @apply hover:bg-gray-100;
-    }
+            .cell {
+                @apply px-4 py-2;
+            }
 
-    .table-cell {
-        @apply px-4 py-2;
+            .actions {
+                @apply px-4 py-1;
+                @apply flex flex-wrap gap-1;
+                @apply whitespace-nowrap;
+            }
+        }
     }
-
-    .table-actions-cell {
-        @apply px-4 py-1;
-        @apply flex flex-wrap gap-1;
-        @apply whitespace-nowrap;
-    }
-
 }
