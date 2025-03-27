@@ -1,12 +1,7 @@
+@import "./navbar.css";
+@import "./sidebar.css";
+
 @layer components {
-    .navbar-container {
-        @apply w-full h-16;
-        @apply fixed top-0;
-    }
-    .sidebar-container {
-        @apply w-96 h-dvh;
-        @apply fixed top-16 left-0;
-    }
     .main-container {
         @apply ml-96 mt-16;
     }
