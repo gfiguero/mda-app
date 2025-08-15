@@ -1,51 +1,51 @@
-<%= form_with(model: employee) do |form| %>
+<%= form_with(model: employee, class: "form-container") do |form| %>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:id) %>
     <%= form.label :id, I18n.t('activerecord.attributes.employee.id'), class: "form-label" %>
-    <%= form.text_field :id, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :id, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:id))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:first_name) %>
     <%= form.label :first_name, I18n.t('activerecord.attributes.employee.first_name'), class: "form-label" %>
-    <%= form.text_field :first_name, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :first_name, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:first_name))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:last_name) %>
     <%= form.label :last_name, I18n.t('activerecord.attributes.employee.last_name'), class: "form-label" %>
-    <%= form.text_field :last_name, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :last_name, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:last_name))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:identification_number) %>
     <%= form.label :identification_number, I18n.t('activerecord.attributes.employee.identification_number'), class: "form-label" %>
-    <%= form.text_field :identification_number, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :identification_number, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:identification_number))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:identification_code) %>
     <%= form.label :identification_code, I18n.t('activerecord.attributes.employee.identification_code'), class: "form-label" %>
-    <%= form.text_field :identification_code, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :identification_code, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:identification_code))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:identification_type) %>
     <%= form.label :identification_type, I18n.t('activerecord.attributes.employee.identification_type'), class: "form-label" %>
-    <%= form.text_field :identification_type, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :identification_type, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:identification_type))) %>
   </div>
 
-  <div class="mb-3">
+  <div class="form-field">
     <% invalid = employee.errors.include?(:email_address) %>
     <%= form.label :email_address, I18n.t('activerecord.attributes.employee.email_address'), class: "form-label" %>
-    <%= form.text_field :email_address, class: "form-control #{'is-invalid' if invalid}" %>
+    <%= form.text_field :email_address, class: "form-control #{'form-control-invalid' if invalid}" %>
     <%= raw(error_message(invalid, employee.errors.full_messages_for(:email_address))) %>
   </div>
 

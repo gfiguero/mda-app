@@ -1,4 +1,5 @@
 class EmployeesController < ApplicationController
+  load_and_authorize_resource
   include Pagy::Backend
 
   before_action :set_employee, only: %i[show edit update destroy]
@@ -79,7 +80,7 @@ class EmployeesController < ApplicationController
   end
 
   def set_employees
-    @employees = Employee.all || Employee.none
+    @employees = Employee.accessible_by(current_ability) || Employee.none
     @employees = @employees.send(sort_scope(sort_params[:sort_column].to_s), sort_params[:sort_direction]) if sort_params.present?
     filter_params.each { |attribute, value| @employees = @employees.send(filter_scope(attribute), value) } if filter_params.present?
   end

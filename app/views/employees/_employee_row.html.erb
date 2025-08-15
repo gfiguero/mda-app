@@ -1,11 +1,11 @@
 <tr class="row">
   <td class="cell"><%= employee.id %></td>
   <td class="actions">
-    <%= link_to "show", employee, class: "button-show", data: {'tooltip-target': "tooltip-show_#{employee.id}", 'tooltip-placement': "left"} %>
+    <%= link_to raw(icon('show', 'w-4 h-4')), employee, class: "button-row button-show", data: {'tooltip-target': "tooltip-show_#{employee.id}", 'tooltip-placement': "left"} %>
     <div id="tooltip-show_<%= employee.id %>" role="tooltip" class="button-tooltip invisible transition-opacity duration-300 opacity-0 tooltip"><%= I18n.t('employees.actions.show', id: employee.id) %><div class="tooltip-arrow" data-popper-arrow></div></div>
-    <%= link_to "edit", edit_employee_path(employee), class: "button-edit", data: {'tooltip-target': "tooltip-edit_#{employee.id}", 'tooltip-placement': "left"} %>
+    <%= link_to raw(icon('edit', 'w-4 h-4')), edit_employee_path(employee), class: "button-row button-edit", data: {'tooltip-target': "tooltip-edit_#{employee.id}", 'tooltip-placement': "left"} %>
     <div id="tooltip-edit_<%= employee.id %>" role="tooltip" class="button-tooltip invisible transition-opacity duration-300 opacity-0 tooltip"><%= I18n.t('employees.actions.edit', id: employee.id) %><div class="tooltip-arrow" data-popper-arrow></div></div>
-    <%= button_to "delete", employee, class: "button-delete", method: :delete, data: {'tooltip-target': "tooltip-delete_#{employee.id}", 'tooltip-placement': "left"} %>
+    <%= link_to raw(icon('delete', 'w-4 h-4')), employee, class: "button-row button-delete", method: :delete, data: {'tooltip-target': "tooltip-delete_#{employee.id}", 'tooltip-placement': "left"} %>
     <div id="tooltip-delete_<%= employee.id %>" role="tooltip" class="button-tooltip invisible transition-opacity duration-300 opacity-0 tooltip"><%= I18n.t('employees.actions.delete', id: employee.id) %><div class="tooltip-arrow" data-popper-arrow></div></div>
   </td>
 </tr>

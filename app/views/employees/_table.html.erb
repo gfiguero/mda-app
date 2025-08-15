@@ -1,12 +1,12 @@
-<div class="pagy-wrapper" data-controller="pagy-initializer"><%== pagy_nav(@pagy) %></div>
+<div class="table-paginator" data-controller="pagy-initializer"><%== pagy_nav(@pagy) %></div>
 
 <div class="table-wrapper">
   <table class="table">
     <thead class="header">
-      <tr>
-        <th scope="col" class="cell"><%= sort_link('employees_path', I18n.t('activerecord.attributes.employee.id'), 'id') %></th>
-        <th scope="col" class="cell"><%= I18n.t('operator.actions') %></th>
-      </tr>
+    <tr>
+      <th scope="col" class="cell"><%= sort_link('employees_path', I18n.t('activerecord.attributes.employee.id'), 'id') %></th>
+      <th scope="col" class="cell"><%= I18n.t('operator.actions') %></th>
+    </tr>
     </thead>
     <tbody>
     <% @employees.each.with_index do |employee| %>
