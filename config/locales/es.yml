@@ -1,4 +1,7 @@
 es:
+  home:
+    message:
+      created: "Registro Creado"
   employees:
     properties:
       title: 'Empleados'
