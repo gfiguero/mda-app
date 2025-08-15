@@ -1,11 +1,153 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the "{}" from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+# For Devise models, we need to provide encrypted_password
+# The encrypted password below corresponds to 'password123'
+# <%= Devise::Encryptor.digest(User, 'password123') %>
+
+admin:
+  email: admin@uniport.io
+  first_name: Admin
+  last_name: User
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  platform_admin: true
+  confirmed_at: <%= Time.now %>
+
+user1:
+  email: user1@example.com
+  first_name: John
+  last_name: Doe
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user2:
+  email: user2@example.com
+  first_name: Jane
+  last_name: Smith
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user3:
+  email: user3@example.com
+  first_name: Robert
+  last_name: Johnson
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user4:
+  email: user4@example.com
+  first_name: Emily
+  last_name: Williams
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user5:
+  email: user5@example.com
+  first_name: Michael
+  last_name: Brown
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user6:
+  email: user6@example.com
+  first_name: Sarah
+  last_name: Jones
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user7:
+  email: user7@example.com
+  first_name: David
+  last_name: Miller
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user8:
+  email: user8@example.com
+  first_name: Lisa
+  last_name: Davis
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user9:
+  email: user9@example.com
+  first_name: James
+  last_name: Garcia
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user10:
+  email: user10@example.com
+  first_name: Jennifer
+  last_name: Rodriguez
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user11:
+  email: user11@example.com
+  first_name: Carlos
+  last_name: Martinez
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user12:
+  email: user12@example.com
+  first_name: Maria
+  last_name: Hernandez
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user13:
+  email: user13@example.com
+  first_name: Kevin
+  last_name: Wilson
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user14:
+  email: user14@example.com
+  first_name: Amanda
+  last_name: Taylor
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user15:
+  email: user15@example.com
+  first_name: Daniel
+  last_name: Anderson
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user16:
+  email: user16@example.com
+  first_name: Michelle
+  last_name: Thomas
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user17:
+  email: user17@example.com
+  first_name: Christopher
+  last_name: Jackson
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user18:
+  email: user18@example.com
+  first_name: Jessica
+  last_name: White
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user19:
+  email: user19@example.com
+  first_name: Matthew
+  last_name: Harris
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
+
+user20:
+  email: user20@example.com
+  first_name: Elizabeth
+  last_name: Martin
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  confirmed_at: <%= Time.now %>
