@@ -1,11 +1,11 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 8.0.1"
+gem "rails"
 gem "propshaft"
-gem "sqlite3", ">= 2.1"
-gem "pg", "~> 1.5"
-gem "activerecord-postgis-adapter", "~> 11.0"
-gem "puma", ">= 5.0"
+gem "sqlite3"
+gem "pg"
+gem "activerecord-postgis-adapter"
+gem "puma"
 gem "jsbundling-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
@@ -13,8 +13,8 @@ gem "jbuilder"
 
 gem "devise"
 gem "cancancan"
-gem "bcrypt", "~> 3.1"
-gem "rails-i18n", "~> 8.0.0" # For Rails >= 8.0.0
+gem "bcrypt"
+gem "rails-i18n"
 gem "pagy"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
@@ -31,6 +31,7 @@ gem "thruster", require: false
 group :development, :test do
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
   gem "brakeman", require: false
+  gem 'simplecov'
   gem "standard", require: false
   gem "faker"
   gem "foreman"
