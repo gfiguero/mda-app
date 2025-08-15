@@ -3,7 +3,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   load_and_authorize_resource
   include Pagy::Backend
 
-  before_action :set_<%= singular_table_name %>, only: %i[ show edit update destroy ]
+  before_action :set_<%= singular_table_name %>, only: %i[show edit update destroy]
   before_action :set_<%= plural_table_name %>, only: :index
   before_action :disabled_pagination
   after_action { pagy_headers_merge(@pagy) if @pagy }
@@ -47,7 +47,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "#{singular_table_name}_params") %>
 
     if @<%= orm_instance.save %>
-      redirect_to <%= redirect_resource_name %>, created: I18n.t('<%= singular_table_name %>.message.created')
+      redirect_to <%= redirect_resource_name %>, created: I18n.t("<%= singular_table_name %>.message.created")
     else
       render :new, status: :unprocessable_entity
     end
@@ -56,7 +56,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # PATCH/PUT <%= route_url %>/1
   def update
     if @<%= orm_instance.update("#{singular_table_name}_params") %>
-      redirect_to <%= redirect_resource_name %>, updated: I18n.t('<%= singular_table_name %>.message.updated'), status: :see_other
+      redirect_to <%= redirect_resource_name %>, updated: I18n.t("<%= singular_table_name %>.message.updated"), status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -65,10 +65,11 @@ class <%= controller_class_name %>Controller < ApplicationController
   # DELETE <%= route_url %>/1
   def destroy
     @<%= orm_instance.destroy %>
-    redirect_to <%= index_helper %>_path, deleted: I18n.t('<%= singular_table_name %>.message.destroyed'), status: :see_other, format: :html
+    redirect_to <%= index_helper %>_path, deleted: I18n.t("<%= singular_table_name %>.message.destroyed"), status: :see_other, format: :html
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_<%= singular_table_name %>
     @<%= singular_table_name %> = <%= orm_class.find(class_name, "params.expect(:id)") %>
@@ -79,7 +80,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     <%- if attributes_names.empty? -%>
     params.fetch(:<%= singular_table_name %>, {})
     <%- else -%>
-    params.expect(<%= singular_table_name %>: [ <%= permitted_params %> ])
+    params.expect(<%= singular_table_name %>: [<%= permitted_params %>])
     <%- end -%>
   end
 
@@ -94,11 +95,11 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def filter_params
-    params.permit(:id, <%= permitted_params %>).reject{|key,value| value.blank? }
+    params.permit(:id, <%= permitted_params %>).reject { |key, value| value.blank? }
   end
 
   def disabled_pagination
-    render json: <%= orm_class.all(class_name) %> if params[:items] == 'all'
+    render json: <%= orm_class.all(class_name) %> if params[:items] == "all"
   end
 end
 <% end -%>
