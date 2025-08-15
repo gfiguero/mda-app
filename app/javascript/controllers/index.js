@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import PagyController from "./pagy_controller"
 application.register("pagy", PagyController)
+
+import FlashController from "./flash_controller"
+application.register("flash", FlashController)
