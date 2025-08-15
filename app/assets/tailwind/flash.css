@@ -1,0 +1,21 @@
+/*
+   Notice: this style contains all the rules for flash
+*/
+@utility flash {
+    @apply fixed top-4 right-4 z-50;
+    @apply p-4;
+    @apply inline-flex justify-center items-center;
+    @apply text-base text-center font-medium leading-none;
+    @apply rounded-lg shadow-lg;
+    @apply transition-opacity duration-500;
+}
+
+@layer components {
+    .flash-message {
+        @apply py-2;
+        @apply flex flex-wrap gap-2;
+        @apply border border-blue-500;
+        @apply bg-blue-200;
+        @apply text-blue-500;
+    }
+}
