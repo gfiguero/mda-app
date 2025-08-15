@@ -1,0 +1,7 @@
+<%= turbo_stream.append "flash" do %>
+  <div class="flash flash-message"
+       data-controller="flash"
+       data-flash-target="message">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
