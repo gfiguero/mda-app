@@ -11,4 +11,4 @@
 # frozen_string_literal: true
 
 # https://marvelcinematicuniverse.fandom.com/wiki/Stark_Industries
-platform_admin = User.create(first_name: "Platform", last_name: "Admin", email: "gfiguero@gmail.com", password: "12345678", platform_admin: true)
+User.create(first_name: "Platform", last_name: "Admin", email: "gfiguero@gmail.com", password: "12345678", platform_admin: true)
