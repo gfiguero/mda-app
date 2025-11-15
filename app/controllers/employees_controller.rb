@@ -1,11 +1,11 @@
 class EmployeesController < ApplicationController
   load_and_authorize_resource
-  include Pagy::Backend
+  include Pagy::Method
 
   before_action :set_employee, only: %i[show edit update destroy]
   before_action :set_employees, only: :index
   before_action :disabled_pagination
-  after_action { pagy_headers_merge(@pagy) if @pagy }
+  after_action { response.headers.merge!(@pagy.headers_hash) if @pagy }
 
   # GET /employees
   def index
