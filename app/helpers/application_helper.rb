@@ -1,6 +1,5 @@
 module ApplicationHelper
   include IconsHelper
-  include Pagy::Frontend
 
   # Flash Messages
   def notification_class(level)
